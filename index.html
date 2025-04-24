@@ -1,11 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      TravelMatch | Conecta con tu próxima experiencia de viaje personalizada
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/landing.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Logo de la empresa -->
+      <div class="logo">
+        <a href="index.html"><h1>TravelMatch</h1></a>
+      </div>
+
+      <!-- Botón del menú hamburguesa (Responsive)-->
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Menú de navegación -->
+      <nav class="nav">
+        <ul>
+          <li><a href="#services">Nuestros Servicios</a></li>
+          <li><a href="#testimonials">Testimonios</a></li>
+          <li><a href="#contact">Contáctanos</a></li>
+          <li><a href="agencias.html">Para Agencias</a></li>
+        </ul>
+        <a href="registro.html" class="btn-hero">Registrarse</a>
+      </nav>
+    </header>
+
+    <!-- Sección principal -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Descubre tu próxima aventura</h1>
+        <p>
+          TravelMatch conecta viajeros con agencias locales que crean
+          experiencias únicas, ajustadas a tus gustos y necesidades.
+        </p>
+        <a href="registro.html" class="btn-hero">Comienza Ahora</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/landscape-img.png" alt="Imagen inicial de finanzas" />
+      </div>
+    </section>
+
+    <img src="assets/waves1.png" alt="Imagen waves" class="waves1" />
+
+    <!-- Sección de Servicios -->
+    <section class="services" id="services">
+      <div class="titulo-services">
+        <div class="titulo-services-text">
+          <h2>Nuestros Servicios</h2>
+          <p>
+            Descubre cómo TravelMatch puede ayudarte a planificar tu próxima
+            aventura
+          </p>
+        </div>
+      </div>
+      <div class="carousel-container">
+        <!-- Boton -->
+        <button class="carousel-button prev" aria-label="Servicio anterior">
+          <i class="fa-solid fa-circle-chevron-left"></i>
+        </button>
+        <!-- Carrusel de servicios -->
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <div class="service-card-carousel">
+                <div class="service-card-carousel-img">
+                  <img
+                    src="assets/service-1-img.png"
+                    alt="Encuentra todo tipo de aventuras"
+                  />
+                </div>
+                <div class="service-card-carousel-text">
+                  <h3>Personaliza tus experiencias</h3>
+                  <p>
+                    Ajusta tus viajes a tus intereses, tiempos y presupuesto.
+                    ¡Diseña tu experiencia ideal con unos pocos clics!
+                  </p>
+                  <a href="#" class="btn-service">Explora Ahora</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <div class="service-card-carousel">
+                <div class="service-card-carousel-img">
+                  <img
+                    src="assets/service-2-img.png"
+                    alt="Encuentra todo tipo de aventuras"
+                  />
+                </div>
+                <div class="service-card-carousel-text">
+                  <h3>Encuentra todo tipo de aventuras</h3>
+                  <p>
+                    Explora una amplia variedad de actividades y destinos, desde
+                    escapadas tranquilas hasta experiencias llenas de
+                    adrenalina.
+                  </p>
+                  <a href="#" class="btn-service">Explora Ahora</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <div class="service-card-carousel">
+                <div class="service-card-carousel-img">
+                  <img
+                    src="assets/service-3-img.png"
+                    alt="Encuentra todo tipo de aventuras"
+                  />
+                </div>
+                <div class="service-card-carousel-text">
+                  <h3>Conecta con agencias locales verificadas</h3>
+                  <p>
+                    Encuentra agencias confiables en tu destino. Nos aseguramos
+                    de que solo trabajes con profesionales verificados.
+                  </p>
+                  <a href="#" class="btn-service">Explora Ahora</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Boton -->
+        <button class="carousel-button next" aria-label="Siguiente servicio">
+          <i class="fa-solid fa-circle-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <img src="assets/waves2.png" alt="Imagen waves 2" class="waves2" />
+
+    <!-- Sección de Testimonios -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonios-titulos">
+        <div class="testimonios-titulos-text">
+          <h2>Testimonios</h2>
+          <p>
+            ¿No sabes por dónde empezar? Déjate guiar por nuestras
+            recomendaciones.
+          </p>
+        </div>
+      </div>
+      <div class="testimonial-container">
+        <div class="testimonial-box">
+          <p>
+            “La app me ha permitido organizar mi itinerario cada vez que viajo
+            por trabajo y busco visitar un lugar turistico. Es ideal para
+            cualquiera que busque relajarse durante viajes corporativos.”
+          </p>
+          <h3>Felipe Ríos</h3>
+          <p>Turista Corporativo</p>
+        </div>
+        <div class="testimonial-box">
+          <p>
+            “Es justo lo que necesitaba para encontrar ofertas y diversas
+            experiencias para mis viajes. Fácil de usar y con herramientas de
+            busqueda que me ahorran tiempo y mejoran mis decisiones turisticas.”
+          </p>
+          <h3>Mariana Smith</h3>
+          <p>Turista Aventurera</p>
+        </div>
+        <div class="testimonial-box">
+          <p>
+            “La app nos ha permitido organizar aumentar nuestra visibilidad
+            dentro del mercado. Muy útil para cualquier negocio que busque
+            eficiencia y eficacia en un solo lugar.”
+          </p>
+          <h3>Arturo Sarmiento</h3>
+          <p>Dueño de Agencia de viajes</p>
+        </div>
+      </div>
+    </section>
+
+    <img src="assets/waves1.png" alt="Imagen waves" class="waves1" />
+
+    <!-- Sección de Contacto -->
+    <section class="contact" id="contact">
+      <h2>Contáctanos</h2>
+
+      <div class="contact-content">
+        <form action="#" method="POST" class="contact-form">
+          <p>Solicita más información</p>
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="telefono">Número telefónico:</label>
+          <input type="tel" id="telefono" name="telefono" required />
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+          <button type="submit" class="btn-contact">Enviar solicitud</button>
+        </form>
+
+        <div class="contact-extras">
+          <div class="extra-box">
+            <h3>¿Aún no pruebas la app?</h3>
+            <a href="registro.html" class="btn-extra">¡Regístrate gratis!</a>
+          </div>
+          <div class="extra-box">
+            <h3>Encuentra tu próxima aventura</h3>
+            <a href="login.html" class="btn-extra">¡Inicia sesión!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content-wrapper">
+        <div class="footer-top">
+          <div class="footer-social">
+            <h4>SÍGUENOS</h4>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4>Nosotros</h4>
+            <ul>
+              <li><a href="#">Quiénes somos</a></li>
+              <li><a href="#">Nuestro compromiso</a></li>
+              <li><a href="#">Trabaja con nosotros</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Legales</h4>
+            <ul>
+              <li><a href="#">Política de Privacidad</a></li>
+              <li><a href="#">Términos y condiciones</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Recursos</h4>
+            <ul>
+              <li><a href="#">Preguntas frecuentes</a></li>
+              <li><a href="#">Blog de viajes</a></li>
+              <li><a href="#">Ayuda al viajero</a></li>
+            </ul>
+          </div>
+          <div class="footer-logo">
+            <a href="index.html"><h1>TravelMatch</h1></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 TravelMatch - Todos los derechos reservados</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Agregamos el script general -->
+    <script src="js/main.js"></script>
+
+    <!-- Agregamos FontAwesome para el manejo de iconos -->
+    <script
+      src="https://kit.fontawesome.com/9dcbd64b96.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
