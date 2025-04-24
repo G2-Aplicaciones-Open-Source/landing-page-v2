@@ -1,0 +1,408 @@
+/* Hoja de estilos general */
+
+/* Reset de márgenes, padding y box-sizing para un diseño más uniforme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables de colores principales */
+:root {
+  --main-font-color: #1c1f2b; /* Color de fuente principal */
+  --secondary-font-color: #3a71c1; /* Color de fuente secundario */
+  --main-background-color: #f5f0e6; /* Color de fondo principal */
+  --secondary-background-color: #ffd479; /* Color de fondo secundario */
+}
+
+/* --- Estilos Globales --- */
+
+body {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  background-color: var(--main-background-color); /* Color de fondo principal */
+}
+
+/* --- Header --- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffd479;
+  padding: 15px 50px;
+}
+
+.logo h1 {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: 37px;
+  font-weight: 900;
+  color: var(--main-font-color);
+  margin-right: auto;
+}
+
+/* --- Menú de Navegación --- */
+
+.nav {
+  display: flex;
+  align-items: center;
+  position: fixed; /* Fijo para que sea un menú lateral */
+  top: 0;
+  right: -100%; /* Oculto fuera de la pantalla por defecto */
+  height: 100%;
+  width: 250px;
+  background-color: #b3b3b3; /* Fondo oscuro */
+  flex-direction: column;
+  padding: 20px 0;
+  transition: right 0.3s ease-in-out; /* Animación para mostrar/ocultar */
+  z-index: 1000; /* Asegurar que esté encima de otros elementos */
+}
+
+.nav.active {
+  right: 0; /* Mostrar el menú lateral */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Apilar enlaces */
+  gap: 15px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: var(--main-font-color);
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav ul li a:hover {
+  background-color: #ffd479; /* Resaltar en hover */
+  color: var(--secondary-font-color);
+}
+
+/* Botón del menú hamburguesa */
+.menu-toggle {
+  display: block; /* Mostrar en pantallas pequeñas */
+  background: none;
+  border: none;
+  color: var(--main-font-color);
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1100; /* Asegurar que esté encima del menú */
+}
+
+.menu-toggle i {
+  pointer-events: none; /* Evitar que el ícono interfiera con el clic */
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none; /* Ocultar el botón hamburguesa */
+  }
+
+  .nav {
+    position: static; /* Menú normal en pantallas grandes */
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    background: none;
+    transition: none;
+  }
+
+  .nav ul {
+    flex-direction: row; /* Mostrar enlaces en línea */
+    gap: 20px;
+  }
+}
+
+/* --- Botón de Regitro --- */
+
+.btn-register {
+  background-color: #1c1f2b;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* --- Footer --- */
+
+.footer {
+  background-color: #372f2f; /* Color oscuro del mockup */
+  color: #f5f0e6; /* Texto claro */
+  padding: 40px 0 20px 0; /* Más padding arriba, menos abajo */
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.footer-content-wrapper {
+  max-width: 1140px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar */
+  padding: 0 20px; /* Padding lateral */
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinear arriba */
+  flex-wrap: wrap; /* Permitir que se envuelvan en pantallas pequeñas */
+  gap: 40px; /* Espacio entre columnas */
+  margin-bottom: 20px;
+}
+
+.footer-logo h1 {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: 32px;
+  font-weight: extra-bold;
+  color: #fff;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 10px; /* Espacio entre iconos */
+}
+
+.footer h4 {
+  font-size: 20px;
+  margin-bottom: 15px; /* Espacio entre título y enlaces */
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Apilar enlaces */
+  gap: 10px; /* Espacio entre enlaces */
+}
+
+.footer-links ul li a {
+  color: #ccc; /* Color de enlaces más suave */
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ffd479; /* Resaltar en hover */
+}
+
+.footer-bottom {
+  border-top: 1px solid #555; /* Línea separadora */
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #aaa; /* Color del copyright */
+}
+
+/* Ajustes responsivos para el footer */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column; /* Apilar columnas */
+    align-items: center; /* Centrar contenido */
+    text-align: center;
+  }
+}
+
+/* --- Formularios --- */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: "'Nunito Sans'", Arial, sans-serif;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-links a {
+  color: #333;
+  transition: color 0.3s;
+}
+
+.form-links a:hover {
+  color: #666;
+}
+
+/* ==========================================================================
+         Media Queries (Responsive Adjustments)
+         ========================================================================== */
+
+/* --- Tablets and Smaller Desktops --- */
+@media (max-width: 991.98px) {
+  .hero {
+    padding: 80px 30px;
+    text-align: center; /* Centrar texto en hero */
+  }
+  .hero-text {
+    align-items: center; /* Centrar contenido de hero-text */
+    max-width: 100%;
+  }
+  .hero-image {
+    margin-top: 40px; /* Espacio cuando se apila */
+    flex-basis: 100%; /* Asegurar que ocupe todo el ancho al apilar */
+  }
+  .services,
+  .testimonials,
+  .contact {
+    padding: 60px 20px; /* Reducir padding general */
+  }
+
+  .titulo-services,
+  .testimonios-titulos {
+    max-width: 90%; /* Usar porcentaje */
+  }
+
+  .carousel-container {
+    max-width: 95%; /* Hacer carrusel un poco más ancho */
+  }
+
+  .carousel-button.prev {
+    left: 5px;
+  }
+  .carousel-button.next {
+    right: 5px;
+  }
+
+  .testimonial-container {
+    gap: 25px; /* Menos espacio entre testimonios */
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: center; /* Centrar items cuando se apilan */
+    gap: 40px;
+  }
+  .contact-form,
+  .contact-extras {
+    width: 100%; /* Ocupar más ancho */
+    max-width: 600px; /* Limitar un poco */
+    flex-basis: auto; /* Resetear flex-basis */
+  }
+  .contact-extras {
+    align-items: stretch;
+  }
+}
+
+/* --- Mobile Devices --- */
+@media (max-width: 767.98px) {
+  /* Reducir tamaños de fuente */
+  .hero-text h1 {
+    font-size: 40px;
+  }
+  .hero-text p {
+    font-size: 18px;
+  }
+  .titulo-services h2,
+  .testimonios-titulos h2,
+  .contact h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+  .titulo-services p,
+  .testimonios-titulos p {
+    font-size: 18px;
+  }
+
+  .btn-hero,
+  .btn-service,
+  .btn-contact,
+  .btn-extra {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .service-card-carousel {
+    flex-direction: column; /* Apilar imagen y texto en carrusel */
+    text-align: center;
+    gap: 20px;
+  }
+  .service-card-carousel-img {
+    flex-basis: auto; /* Resetear base */
+    width: 60%; /* Ajustar ancho de imagen */
+    min-width: 0;
+  }
+  .service-card-carousel-text {
+    text-align: center;
+    min-width: 0;
+  }
+
+  .carousel-button {
+    font-size: 2rem; /* Iconos de carrusel más pequeños */
+  }
+  .carousel-button.prev {
+    left: 5px;
+  }
+  .carousel-button.next {
+    right: 5px;
+  }
+
+  .testimonial-box {
+    min-width: 90%; /* Hacer testimonios más anchos */
+  }
+
+  .contact-form {
+    padding: 30px;
+  }
+  .contact-form p {
+    font-size: 20px;
+  }
+  .extra-box {
+    padding: 25px;
+  }
+  .extra-box h3 {
+    font-size: 18px;
+  }
+}
+
+/* --- Smaller Mobile Devices --- */
+@media (max-width: 479.98px) {
+  .hero {
+    padding: 60px 20px;
+  }
+  .hero-text h1 {
+    font-size: 32px;
+  }
+  .hero-text p {
+    font-size: 16px;
+  }
+  .titulo-services h2,
+  .testimonios-titulos h2,
+  .contact h2 {
+    font-size: 28px;
+  }
+  .titulo-services p,
+  .testimonios-titulos p {
+    font-size: 16px;
+  }
+
+  .btn-hero,
+  .btn-service,
+  .btn-contact,
+  .btn-extra {
+    width: 100%; /* Botones full-width */
+    max-width: none;
+    box-sizing: border-box; /* Incluir padding en el ancho */
+  }
+  .btn-contact {
+    align-self: auto;
+  } /* Resetear alineación */
+}

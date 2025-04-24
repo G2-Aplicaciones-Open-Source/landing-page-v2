@@ -1,0 +1,495 @@
+/* Hoja de estilos para elementos del landing */
+/* ==========================================================================
+   Landing Page Specific Styles (landing.css)
+   ========================================================================== */
+
+/* --- Hero Section --- */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 420px; */ /* Considerar usar min-height o padding para controlar altura */
+  min-height: 70vh; /* Ejemplo usando viewport height */
+  background-color: #ffd479;
+  padding: 100px 50px; /* Ajustar padding según sea necesario */
+  gap: 40px;
+  /* align-self: stretch; */ /* Puede no ser necesario si .hero está directamente en body */
+  flex-wrap: wrap; /* Permitir que el contenido se ajuste en pantallas pequeñas */
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1; /* Permitir que ocupe espacio */
+  min-width: 300px; /* Ancho mínimo antes de envolver */
+  max-width: 573px; /* Ancho máximo */
+}
+
+.hero-text h1 {
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  color: #1c1f2b;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  color: rgba(0, 0, 0, 0.75);
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.btn-hero {
+  background-color: #1c1f2b;
+  color: white;
+  padding: 12px 20px; /* Aumentar padding para mejor apariencia */
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold; /* Usar 'bold' en lugar de 'semibold' */
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-block; /* Asegurar padding correcto */
+}
+
+.btn-hero:hover {
+  background-color: #16214f; /* Ejemplo de color hover */
+  transform: translateY(-2px); /* Efecto sutil */
+}
+
+.hero-image {
+  flex: 1; /* Permitir que ocupe espacio */
+  text-align: center; /* Centrar imagen dentro de su contenedor */
+  min-width: 300px;
+}
+
+.hero-image img {
+  max-width: 100%; /* Hacer la imagen responsive */
+  height: auto;
+  max-height: 400px; /* Limitar altura máxima si es necesario */
+}
+
+/* --- Waves Separators --- */
+.waves1,
+.waves2 {
+  width: 100%;
+  height: auto;
+  display: block;
+  line-height: 0; /* Ayuda a eliminar espacio debajo de la imagen */
+}
+
+/* --- Services Section --- */
+.services {
+  display: flex;
+  padding: 80px 20px; /* Ajustar padding */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f0e6; /* Color de fondo base */
+}
+
+.titulo-services {
+  display: flex; /* Ya es flex, pero confirmar */
+  flex-direction: column; /* Hacerlo columna para centrar texto */
+  text-align: center; /* Centrar texto */
+  max-width: 800px; /* Limitar ancho del título */
+  margin: 0 auto 40px auto; /* Centrar y dar espacio inferior */
+  gap: 12px;
+}
+
+/* No es necesario .titulo-services-text si .titulo-services es flex-column */
+/* .titulo-services-text { ... } */
+
+.titulo-services h2 {
+  /* align-self: stretch; */ /* No necesario si el contenedor está centrado */
+  color: #1c1f2b; /* Color más oscuro */
+  font-size: 45px;
+  font-weight: 800;
+  font-family: "Nunito Sans", sans-serif; /* Asegurar fuente */
+  line-height: 1.3;
+}
+
+.titulo-services p {
+  /* align-self: stretch; */ /* No necesario */
+  color: #333; /* Color de párrafo */
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* --- Carousel Component (within Services) --- */
+.carousel-container {
+  position: relative;
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: 0 10px; /* Reducir padding si los botones están fuera */
+}
+
+.service-card-carousel {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 25px;
+  border: 1px solid #e0e0e0;
+  min-height: 300px;
+  flex-wrap: wrap; /* Permitir envolver en pantallas muy pequeñas */
+  width: 100%; /* Asegura que la tarjeta ocupe todo el ancho del slide (menos padding) */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho/alto total */
+  height: 100%;
+}
+
+.service-card-carousel-img {
+  flex: 0 0 40%;
+  text-align: center;
+  min-width: 200px; /* Ancho mínimo para la imagen */
+}
+
+.service-card-carousel-img img {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;
+}
+
+.service-card-carousel-text {
+  flex: 1;
+  text-align: left;
+  min-width: 250px; /* Ancho mínimo para el texto */
+  max-width: 400px; /* Limitar el ancho máximo del texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegurar que el contenido esté distribuido */
+}
+
+.service-card-carousel-text h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.service-card-carousel-text p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-service {
+  background-color: #1e223b;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.btn-service:hover {
+  background-color: #372f2f;
+  transform: translateY(-2px);
+}
+
+/* --- Carousel Buttons --- */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #1c1f2b;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 2.5rem;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-button:hover {
+  opacity: 1;
+}
+
+.carousel-button.prev {
+  left: -45px; /* Ajustar posición */
+}
+
+.carousel-button.next {
+  right: -45px; /* Ajustar posición */
+}
+
+.carousel-button i {
+  display: block;
+}
+
+.carousel-button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* --- Testimonials Section --- */
+.testimonials {
+  /* height: 440px; */ /* Evitar alturas fijas, usar padding */
+  min-height: 440px;
+  display: flex;
+  padding: 80px 20px; /* Ajustar padding */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: #ffd479;
+}
+
+.testimonios-titulos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto; /* Centrar */
+  gap: 12px;
+  /* width: 1140px; */ /* Usar max-width en su lugar */
+}
+
+/* No es necesario .testimonios-titulos-text si .testimonios-titulos es flex-column */
+/* .testimonios-titulos-text { ... } */
+
+.testimonios-titulos h2 {
+  /* align-self: stretch; */
+  color: #1c1f2b;
+  font-size: 45px;
+  font-weight: 800;
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.3;
+}
+
+.testimonios-titulos p {
+  /* align-self: stretch; */
+  color: #333;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Permitir que se envuelvan */
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo para el contenedor de testimonios */
+}
+
+.testimonial-box {
+  background: #f5f0e6; /* Cambiar fondo para contraste con sección amarilla */
+  padding: 25px; /* Ajustar padding */
+  border-radius: 10px;
+  border: 1px solid #1c1f2b;
+  /* box-shadow: 5px 4px 2px 1px rgba(0, 0, 0, 0.75); */ /* Sombra puede ser muy fuerte */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más sutil */
+  flex: 1; /* Permitir que crezcan y se encojan */
+  min-width: 300px; /* Ancho mínimo antes de envolver */
+  max-width: 360px; /* Ancho máximo por tarjeta */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
+  min-height: 235px;
+}
+
+.testimonial-box p:first-of-type {
+  /* Estilo para el párrafo de la cita */
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+  font-size: 16px; /* Ajustar tamaño */
+  font-weight: 500; /* 'semibold' no es un valor estándar, usar numérico o 'bold'/'normal' */
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px; /* Espacio antes del nombre */
+}
+
+.testimonial-box h3 {
+  /* Estilo para el nombre */
+  font-family: "Nunito Sans", sans-serif; /* Usar Nunito para consistencia, o Inter si prefieres */
+  font-style: normal;
+  font-size: 18px;
+  color: #1c1f2b;
+  font-weight: bold;
+  text-align: left;
+  margin: 15px 0 5px 0; /* Espacio arriba y abajo */
+}
+
+.testimonial-box p:last-of-type {
+  /* Estilo para el título/rol */
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  color: #555;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+/* --- Contact Section --- */
+.contact {
+  padding: 80px 20px; /* Ajustar padding */
+  background-color: #f5f0e6;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 800;
+  color: #1c1f2b;
+  margin-bottom: 60px;
+  font-family: "Nunito Sans", sans-serif; /* Asegurar fuente */
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1140px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Permitir envolver */
+}
+
+.contact-form {
+  flex: 1 1 450px; /* Ajustar base */
+  max-width: 506px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Aumentar gap */
+  background-color: #fff;
+}
+
+.contact-form p {
+  /* Título del formulario */
+  text-align: left;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px; /* Reducir margen */
+  font-family: "Nunito Sans", sans-serif;
+  color: #333;
+}
+
+.contact-form label {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 5px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px; /* Tamaño de label */
+  color: #555;
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%;
+  padding: 12px; /* Ajustar padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  outline-color: #ffd479; /* Color al enfocar */
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical; /* Permitir redimensionar verticalmente */
+}
+
+.btn-contact {
+  background-color: #1e223b;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  width: 100%; /* Hacer botón ancho completo */
+  max-width: 250px; /* Limitar ancho máximo */
+  align-self: center; /* Centrar botón */
+  margin-top: 10px; /* Espacio arriba */
+  transition: background-color 0.3s, transform 0.3s;
+}
+.btn-contact:hover {
+  background-color: #372f2f;
+  transform: translateY(-2px);
+}
+
+.contact-extras {
+  flex: 1 1 350px; /* Ajustar base */
+  max-width: 400px; /* Limitar ancho */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.extra-box {
+  background-color: #fff;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.extra-box h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.btn-extra {
+  background-color: #ffd479;
+  color: #1e223b;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  border: 1px solid #1e223b;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-extra:hover {
+  background-color: #1e223b;
+  color: #ffd479;
+}
