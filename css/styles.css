@@ -32,6 +32,11 @@ body {
   padding: 15px 50px;
 }
 
+.logo a,
+.footer-logo a {
+  text-decoration: none;
+}
+
 .logo h1 {
   font-family: "Nunito Sans", Arial, sans-serif;
   font-size: 37px;
@@ -39,6 +44,7 @@ body {
   color: var(--main-font-color);
   margin-right: auto;
 }
+
 
 /* --- Menú de Navegación --- */
 
