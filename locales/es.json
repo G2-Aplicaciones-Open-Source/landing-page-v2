@@ -1,0 +1,103 @@
+{
+  "header": {
+    "title": "TravelMatch | Conecta con tu próxima experiencia de viaje personalizada",
+    "titleAgencies": "TravelMatch | Conecta agencias de viajes con turistas",
+    "menu": {
+      "services": "Nuestros Servicios",
+      "testimonials": "Testimonios",
+      "contact": "Contáctanos",
+      "agencies": "Para Agencias"
+    },
+    "register": "Registrarse"
+  },
+  "language": {
+    "current": "ES",
+    "spanish": "Español",
+    "english": "English"
+  },
+  "hero": {
+    "title": "Descubre tu próxima aventura",
+    "description": "TravelMatch conecta viajeros con agencias locales que crean experiencias únicas, ajustadas a tus gustos y necesidades.",
+    "cta": "Comienza Ahora"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Descubre cómo TravelMatch puede ayudarte a planificar tu próxima aventura",
+    "cta": "Explora Ahora",
+    "service1": {
+      "title": "Personaliza tus experiencias",
+      "description": "Ajusta tus viajes a tus intereses, tiempos y presupuesto. ¡Diseña tu experiencia ideal con unos pocos clics!"
+    },
+    "service2": {
+      "title": "Encuentra todo tipo de aventuras",
+      "description": "Explora una amplia variedad de actividades y destinos, desde escapadas tranquilas hasta experiencias llenas de adrenalina."
+    },
+    "service3": {
+      "title": "Conecta con agencias locales verificadas",
+      "description": "Encuentra agencias confiables en tu destino. Nos aseguramos de que solo trabajes con profesionales verificados."
+    }
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "¿No sabes por dónde empezar? Déjate guiar por nuestras recomendaciones.",
+    "testimonial1": {
+      "content": "\"La app me ha permitido organizar mi itinerario cada vez que viajo por trabajo y busco visitar un lugar turístico. Es ideal para cualquiera que busque relajarse durante viajes corporativos.\"",
+      "name": "Felipe Ríos",
+      "role": "Turista Corporativo"
+    },
+    "testimonial2": {
+      "content": "\"Es justo lo que necesitaba para encontrar ofertas y diversas experiencias para mis viajes. Fácil de usar y con herramientas de búsqueda que me ahorran tiempo y mejoran mis decisiones turísticas.\"",
+      "name": "Mariana Smith",
+      "role": "Turista Aventurera"
+    },
+    "testimonial3": {
+      "content": "\"La app nos ha permitido aumentar nuestra visibilidad dentro del mercado. Muy útil para cualquier negocio que busque eficiencia y eficacia en un solo lugar.\"",
+      "name": "Arturo Sarmiento",
+      "role": "Dueño de Agencia de viajes"
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "form": {
+      "subtitle": "Solicita más información",
+      "email": "Correo electrónico:",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Número telefónico:",
+      "phonePlaceholder": "+51 999 999 999",
+      "message": "Mensaje:",
+      "messagePlaceholder": "Escribe tu mensaje aquí...",
+      "submit": "Enviar solicitud"
+    },
+    "extra1": {
+      "title": "¿Aún no pruebas la app?",
+      "cta": "¡Regístrate gratis!"
+    },
+    "extra2": {
+      "title": "Encuentra tu próxima aventura",
+      "cta": "¡Inicia sesión ahora!"
+    }
+  },
+  "footer": {
+    "social": {
+      "title": "SÍGUENOS"
+    },
+    "about": {
+      "title": "Nosotros",
+      "whoWeAre": "Quiénes somos",
+      "commitment": "Nuestro compromiso",
+      "careers": "Trabaja con nosotros"
+    },
+    "legal": {
+      "title": "Legales",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos y condiciones"
+    },
+    "resources": {
+      "title": "Recursos",
+      "faq": "Preguntas frecuentes",
+      "blog": "Blog de viajes",
+      "help": "Ayuda al viajero"
+    },
+    "copyright": "© 2025 TravelMatch - Todos los derechos reservados"
+  }
+}
