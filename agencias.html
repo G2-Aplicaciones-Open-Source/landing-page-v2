@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      TravelMatch | Conecta con tu próxima experiencia de viaje personalizada
+      TravelMatch | Encuentra viajeros para tu agencia de viajes
     </title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,31 +12,75 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/landing.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/landing.css" />
   </head>
   <body>
-    <!-- Header -->
-    <header class="header">
-      <!-- Logo de la empresa -->
-      <div class="logo">
-        <a href="index.html"><h1>TravelMatch</h1></a>
-      </div>
-
-      <!-- Botón del menú hamburguesa (Responsive)-->
-      <button class="menu-toggle" aria-label="Abrir menú">
+    <!--* Header Optimizado *-->
+    <header class="header" role="banner">
+      <!-- Mobile Menu Toggle -->
+      <button
+        class="menu-toggle"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+      >
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <!-- Menú de navegación -->
-      <nav class="nav">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html" aria-label="TravelMatch - Página de inicio">
+          <h1>TravelMatch</h1>
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="nav" role="navigation" aria-label="Navegación principal">
         <ul>
-          <li><a href="#services">Como Funciona</a></li>
-          <li><a href="#testimonials">Testimonios</a></li>
-          <li><a href="#contact">Contáctanos</a></li>
-          <li><a href="index.html">Para Viajeros</a></li>
+          <li>
+            <a href="#services" data-i18n="header.menu.services"
+              >Como Funciona</a
+            >
+          </li>
+          <li>
+            <a href="#testimonials" data-i18n="header.menu.testimonials"
+              >Testimonios</a
+            >
+          </li>
+          <li>
+            <a href="#contact" data-i18n="header.menu.contact">Contáctanos</a>
+          </li>
+          <li>
+            <a href="../index.html" data-i18n="header.menu.agencies"
+              >Para Viajeros</a
+            >
+          </li>
         </ul>
-        <a href="registro-agencia.html" class="btn-hero">Registrarse</a>
+
+        <!-- Register Button -->
+        <a
+          href="https://travel-match-1f187.web.app"
+          class="btn-hero"
+          data-i18n="header.register"
+          >Registrarse</a
+        >
+
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+          <button
+            class="language-button"
+            aria-label="Cambiar idioma"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-globe"></i>
+            <span class="sr-only">Idioma actual: </span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="language-menu" role="menu">
+            <li data-lang="es" role="menuitem">ES</li>
+            <li data-lang="en" role="menuitem">EN</li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -48,17 +92,17 @@
           TravelMatch te conecta con viajeros interesados en tus servicios.
           Optimiza tu visibilidad, ahorra tiempo y aumenta tus reservas.
         </p>
-        <a href="registro-agencia.html" class="btn-hero">Únete a TravelMatch</a>
+        <a href="https://travel-match-1f187.web.app" class="btn-hero">Únete a TravelMatch</a>
       </div>
       <div class="hero-image">
         <img
-          src="assets/landscape-agency.png"
+          src="../assets/landscape-agency.png"
           alt="Imagen de agencia de viajes trabajando con clientes"
         />
       </div>
     </section>
 
-    <img src="assets/waves1.png" alt="Imagen waves" class="waves1" />
+    <img src="../assets/waves1.png" alt="Imagen waves" class="waves1" />
 
     <!-- Sección de Servicios -->
     <section class="services" id="services">
@@ -84,7 +128,7 @@
               <div class="service-card-carousel">
                 <div class="service-card-carousel-img">
                   <img
-                    src="assets/service-1-agency.png"
+                    src="../assets/service-1-agency.png"
                     alt="Panel de gestión"
                   />
                 </div>
@@ -103,7 +147,7 @@
               <div class="service-card-carousel">
                 <div class="service-card-carousel-img">
                   <img
-                    src="assets/service-2-agency.png"
+                    src="../assets/service-2-agency.png"
                     alt="Match con viajeros"
                   />
                 </div>
@@ -122,7 +166,7 @@
               <div class="service-card-carousel">
                 <div class="service-card-carousel-img">
                   <img
-                    src="assets/service-3-agency.png"
+                    src="../assets/service-3-agency.png"
                     alt="Datos de rendimiento de tu agencia"
                   />
                 </div>
@@ -141,7 +185,7 @@
               <div class="service-card-carousel">
                 <div class="service-card-carousel-img">
                   <img
-                    src="assets/service-4-agency.png"
+                    src="../assets/service-4-agency.png"
                     alt="Gana con cada suscripción"
                   />
                 </div>
@@ -152,7 +196,7 @@
                     app, generas ingresos de forma constante. ¡Convierte tu
                     experiencia en una fuente de ganancias sostenibles!
                   </p>
-                  <a href="registro-agencia.html" class="btn-service"
+                  <a href="https://travel-match-1f187.web.app" class="btn-service"
                     >Únete ahora</a
                   >
                 </div>
@@ -167,7 +211,7 @@
       </div>
     </section>
 
-    <img src="assets/waves2.png" alt="Imagen waves 2" class="waves2" />
+    <img src="../assets/waves2.png" alt="Imagen waves 2" class="waves2" />
 
     <!-- Sección de Testimonios -->
     <section class="testimonials" id="testimonials">
@@ -211,7 +255,7 @@
       </div>
     </section>
 
-    <img src="assets/waves1.png" alt="Imagen waves" class="waves1" />
+    <img src="../assets/waves1.png" alt="Imagen waves" class="waves1" />
 
     <!-- Sección de Contacto -->
     <section class="contact" id="contact">
@@ -235,13 +279,13 @@
         <div class="contact-extras">
           <div class="extra-box">
             <h3>¿Aún no pruebas la app?</h3>
-            <a href="registro-agencia.html" class="btn-extra"
+            <a href="https://travel-match-1f187.web.app" class="btn-extra"
               >¡Regístrate gratis!</a
             >
           </div>
           <div class="extra-box">
             <h3>Encuentra a otro viajero</h3>
-            <a href="login.html" class="btn-extra">¡Inicia sesión!</a>
+            <a href="https://travel-match-1f187.web.app" class="btn-extra">¡Inicia sesión!</a>
           </div>
         </div>
       </div>
@@ -292,7 +336,7 @@
             </ul>
           </div>
           <div class="footer-logo">
-            <a href="index.html"><h1>TravelMatch</h1></a>
+            <a href="../index.html"><h1>TravelMatch</h1></a>
           </div>
         </div>
         <div class="footer-bottom">
@@ -302,7 +346,7 @@
     </footer>
 
     <!-- Agregamos el script general -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 
     <!-- Agregamos FontAwesome para el manejo de iconos -->
     <script
