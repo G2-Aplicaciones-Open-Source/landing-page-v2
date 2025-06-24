@@ -1,11 +1,18 @@
 {
   "header": {
     "title": "TravelMatch | Connect with your next personalized travel experience",
+    "titleAgencies": "TravelMatch | Connect travel agencies with tourists",
     "menu": {
       "services": "Our Services",
       "testimonials": "Testimonials",
       "contact": "Contact Us",
       "agencies": "For Agencies"
+    },
+    "menuAgencies": {
+      "services": "How It Works",
+      "testimonials": "Testimonials",
+      "contact": "Contact Us",
+      "agencies": "For Travelers"
     },
     "register": "Register"
   },
@@ -17,7 +24,12 @@
   "hero": {
     "title": "Discover your next adventure",
     "description": "TravelMatch connects travelers with local agencies that create unique experiences tailored to your tastes and needs.",
-    "cta": "Start Now"
+    "cta": "Start Now",
+    "agencies": {
+      "title": "Take your agency to the next level",
+      "description": "TravelMatch connects you with travelers interested in your services. Optimize your visibility, save time, and increase your bookings.",
+      "cta": "Join TravelMatch"
+    }
   },
   "services": {
     "title": "Our Services",
@@ -34,6 +46,26 @@
     "service3": {
       "title": "Connect with verified local agencies",
       "description": "Find reliable agencies at your destination. We make sure you only work with verified professionals."
+    },
+    "agencies": {
+      "title": "How does it work for agencies?",
+      "subtitle": "TravelMatch provides you with digital tools to attract, manage, and retain customers with ease.",
+      "service1": {
+        "title": "Intuitive management panel",
+        "description": "Manage your packages, respond to requests, and track bookings from one place."
+      },
+      "service2": {
+        "title": "Receive qualified travelers",
+        "description": "Connect with users who are looking for exactly the services you offer, without extra effort."
+      },
+      "service3": {
+        "title": "Data for strategic decisions",
+        "description": "Access statistics about your bookings, market interests and performance of your packages."
+      },
+      "service4": {
+        "title": "Get recurring income",
+        "description": "With each active subscription that your agency receives from the app, you generate income consistently. Turn your experience into a source of sustainable earnings!"
+      }
     }
   },
   "testimonials": {
@@ -53,6 +85,25 @@
       "content": "\"The app has allowed us to increase our visibility within the market. Very useful for any business looking for efficiency and effectiveness in one place.\"",
       "name": "Arturo Sarmiento",
       "role": "Travel Agency Owner"
+    },
+    "agencies": {
+      "title": "What our partner agencies say",
+      "subtitle": "Learn how TravelMatch has transformed the way agencies operate and grow throughout the country.",
+      "testimonial1": {
+        "content": "\"Thanks to TravelMatch, our agency has doubled its number of bookings in just 3 months. A platform that really understands the sector!\"",
+        "name": "Andrea Torres",
+        "role": "Manager at Aventura Andina"
+      },
+      "testimonial2": {
+        "content": "\"Before we only worked with local clients. Now we have international visitors every week. And everything is super easy to handle!\"",
+        "name": "Renzo Gutiérrez",
+        "role": "Owner of Ruta Viva Travel"
+      },
+      "testimonial3": {
+        "content": "\"The management panel allows us to save time and focus on what matters: designing unforgettable experiences for our clients.\"",
+        "name": "Camila López",
+        "role": "Coordinator at Destino Natural"
+      }
     }
   },
   "contact": {
@@ -74,6 +125,18 @@
     "extra2": {
       "title": "Find your next adventure",
       "cta": "Sign in now"
+    }
+  },
+  "videos": {
+    "title": "Learn more about TravelMatch",
+    "subtitle": "Discover how our team and product can transform your travel agency",
+    "team": {
+      "title": "About the Team",
+      "description": "Meet the team behind TravelMatch and our passion for connecting travelers with unique experiences."
+    },
+    "product": {
+      "title": "About the Product", 
+      "description": "Explore the features and benefits of our platform designed especially for travel agencies."
     }
   },
   "footer": {

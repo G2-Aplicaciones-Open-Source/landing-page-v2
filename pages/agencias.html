@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      TravelMatch | Encuentra viajeros para tu agencia de viajes
-    </title>
+    <title>TravelMatch | Encuentra viajeros para tu agencia de viajes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +12,7 @@
     />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/landing.css" />
+    <link rel="stylesheet" href="../css/videos.css" />
   </head>
   <body>
     <!--* Header Optimizado *-->
@@ -29,7 +28,7 @@
 
       <!-- Logo -->
       <div class="logo">
-        <a href="index.html" aria-label="TravelMatch - Página de inicio">
+        <a href="#" aria-label="TravelMatch - Página de inicio">
           <h1>TravelMatch</h1>
         </a>
       </div>
@@ -38,20 +37,22 @@
       <nav class="nav" role="navigation" aria-label="Navegación principal">
         <ul>
           <li>
-            <a href="#services" data-i18n="header.menu.services"
+            <a href="#services" data-i18n="header.menuAgencies.services"
               >Como Funciona</a
             >
           </li>
           <li>
-            <a href="#testimonials" data-i18n="header.menu.testimonials"
+            <a href="#testimonials" data-i18n="header.menuAgencies.testimonials"
               >Testimonios</a
             >
           </li>
           <li>
-            <a href="#contact" data-i18n="header.menu.contact">Contáctanos</a>
+            <a href="#contact" data-i18n="header.menuAgencies.contact"
+              >Contáctanos</a
+            >
           </li>
           <li>
-            <a href="../index.html" data-i18n="header.menu.agencies"
+            <a href="../index.html" data-i18n="header.menuAgencies.agencies"
               >Para Viajeros</a
             >
           </li>
@@ -87,12 +88,19 @@
     <!-- Sección principal -->
     <section class="hero">
       <div class="hero-text">
-        <h1>Impulsa tu agencia al siguiente nivel</h1>
-        <p>
+        <h1 data-i18n="hero.agencies.title">
+          Impulsa tu agencia al siguiente nivel
+        </h1>
+        <p data-i18n="hero.agencies.description">
           TravelMatch te conecta con viajeros interesados en tus servicios.
           Optimiza tu visibilidad, ahorra tiempo y aumenta tus reservas.
         </p>
-        <a href="https://travel-match-1f187.web.app" class="btn-hero">Únete a TravelMatch</a>
+        <a
+          href="https://travel-match-1f187.web.app"
+          class="btn-hero"
+          data-i18n="hero.agencies.cta"
+          >Únete a TravelMatch</a
+        >
       </div>
       <div class="hero-image">
         <img
@@ -108,8 +116,10 @@
     <section class="services" id="services">
       <div class="titulo-services">
         <div class="titulo-services-text">
-          <h2>¿Cómo funciona para agencias?</h2>
-          <p>
+          <h2 data-i18n="services.agencies.title">
+            ¿Cómo funciona para agencias?
+          </h2>
+          <p data-i18n="services.agencies.subtitle">
             TravelMatch te brinda herramientas digitales para atraer, gestionar
             y fidelizar clientes con facilidad.
           </p>
@@ -133,12 +143,19 @@
                   />
                 </div>
                 <div class="service-card-carousel-text">
-                  <h3>Panel de gestión intuitivo</h3>
-                  <p>
+                  <h3 data-i18n="services.agencies.service1.title">
+                    Panel de gestión intuitivo
+                  </h3>
+                  <p data-i18n="services.agencies.service1.description">
                     Administra tus paquetes, responde solicitudes y haz
                     seguimiento a reservas desde un solo lugar.
                   </p>
-                  <a href="#" class="btn-service">Empieza ya</a>
+                  <a
+                    href="https://travel-match-1f187.web.app"
+                    class="btn-service"
+                    data-i18n="services.cta"
+                    >Empieza ya</a
+                  >
                 </div>
               </div>
             </div>
@@ -152,12 +169,19 @@
                   />
                 </div>
                 <div class="service-card-carousel-text">
-                  <h3>Recibe viajeros calificados</h3>
-                  <p>
+                  <h3 data-i18n="services.agencies.service2.title">
+                    Recibe viajeros calificados
+                  </h3>
+                  <p data-i18n="services.agencies.service2.description">
                     Conecta con usuarios que buscan exactamente los servicios
                     que tú ofreces, sin esfuerzo adicional.
                   </p>
-                  <a href="#" class="btn-service">Explora Ahora</a>
+                  <a
+                    href="https://travel-match-1f187.web.app"
+                    class="btn-service"
+                    data-i18n="services.cta"
+                    >Explora Ahora</a
+                  >
                 </div>
               </div>
             </div>
@@ -171,12 +195,19 @@
                   />
                 </div>
                 <div class="service-card-carousel-text">
-                  <h3>Datos para decisiones estratégicas</h3>
-                  <p>
+                  <h3 data-i18n="services.agencies.service3.title">
+                    Datos para decisiones estratégicas
+                  </h3>
+                  <p data-i18n="services.agencies.service3.description">
                     Accede a estadísticas sobre tus reservas, intereses del
                     mercado y rendimiento de tus paquetes.
                   </p>
-                  <a href="#" class="btn-service">Explora Ahora</a>
+                  <a
+                    href="https://travel-match-1f187.web.app"
+                    class="btn-service"
+                    data-i18n="services.cta"
+                    >Explora Ahora</a
+                  >
                 </div>
               </div>
             </div>
@@ -190,13 +221,18 @@
                   />
                 </div>
                 <div class="service-card-carousel-text">
-                  <h3>Obtén ingresos recurrentes</h3>
-                  <p>
+                  <h3 data-i18n="services.agencies.service4.title">
+                    Obtén ingresos recurrentes
+                  </h3>
+                  <p data-i18n="services.agencies.service4.description">
                     Con cada suscripción activa que reciba tu agencia desde la
                     app, generas ingresos de forma constante. ¡Convierte tu
                     experiencia en una fuente de ganancias sostenibles!
                   </p>
-                  <a href="https://travel-match-1f187.web.app" class="btn-service"
+                  <a
+                    href="https://travel-match-1f187.web.app"
+                    class="btn-service"
+                    data-i18n="services.cta"
                     >Únete ahora</a
                   >
                 </div>
@@ -217,8 +253,10 @@
     <section class="testimonials" id="testimonials">
       <div class="testimonios-titulos">
         <div class="testimonios-titulos-text">
-          <h2>Lo que dicen nuestras agencias aliadas</h2>
-          <p>
+          <h2 data-i18n="testimonials.agencies.title">
+            Lo que dicen nuestras agencias aliadas
+          </h2>
+          <p data-i18n="testimonials.agencies.subtitle">
             Conoce cómo TravelMatch ha transformado la manera de operar y crecer
             para agencias de todo el país.
           </p>
@@ -226,31 +264,43 @@
       </div>
       <div class="testimonial-container">
         <div class="testimonial-box">
-          <p>
-            “Gracias a TravelMatch, nuestra agencia ha duplicado su número de
+          <p data-i18n="testimonials.agencies.testimonial1.content">
+            "Gracias a TravelMatch, nuestra agencia ha duplicado su número de
             reservas en solo 3 meses. ¡Una plataforma que realmente entiende al
-            sector!”
+            sector!"
           </p>
-          <h3>Andrea Torres</h3>
-          <p>Gerente de Aventura Andina</p>
+          <h3 data-i18n="testimonials.agencies.testimonial1.name">
+            Andrea Torres
+          </h3>
+          <p data-i18n="testimonials.agencies.testimonial1.role">
+            Gerente de Aventura Andina
+          </p>
         </div>
         <div class="testimonial-box">
-          <p>
-            “Antes solo trabajábamos con clientes locales. Ahora tenemos
+          <p data-i18n="testimonials.agencies.testimonial2.content">
+            "Antes solo trabajábamos con clientes locales. Ahora tenemos
             visitantes internacionales cada semana. ¡Y todo es súper fácil de
-            manejar!”
+            manejar!"
           </p>
-          <h3>Renzo Gutiérrez</h3>
-          <p>Dueño de Ruta Viva Travel</p>
+          <h3 data-i18n="testimonials.agencies.testimonial2.name">
+            Renzo Gutiérrez
+          </h3>
+          <p data-i18n="testimonials.agencies.testimonial2.role">
+            Dueño de Ruta Viva Travel
+          </p>
         </div>
         <div class="testimonial-box">
-          <p>
-            “El panel de gestión nos permite ahorrar tiempo y concentrarnos en
+          <p data-i18n="testimonials.agencies.testimonial3.content">
+            "El panel de gestión nos permite ahorrar tiempo y concentrarnos en
             lo que importa: diseñar experiencias inolvidables para nuestros
-            clientes.”
+            clientes."
           </p>
-          <h3>Camila López</h3>
-          <p>Coordinadora en Destino Natural</p>
+          <h3 data-i18n="testimonials.agencies.testimonial3.name">
+            Camila López
+          </h3>
+          <p data-i18n="testimonials.agencies.testimonial3.role">
+            Coordinadora en Destino Natural
+          </p>
         </div>
       </div>
     </section>
@@ -259,33 +309,108 @@
 
     <!-- Sección de Contacto -->
     <section class="contact" id="contact">
-      <h2>Contáctanos</h2>
+      <h2 data-i18n="contact.title">Contáctanos</h2>
 
       <div class="contact-content">
         <form action="#" method="POST" class="contact-form">
-          <p>Solicita más información</p>
-          <label for="email">Correo electrónico:</label>
+          <p data-i18n="contact.form.subtitle">Solicita más información</p>
+          <label for="email" data-i18n="contact.form.email"
+            >Correo electrónico:</label
+          >
           <input type="email" id="email" name="email" required />
 
-          <label for="telefono">Número telefónico:</label>
+          <label for="telefono" data-i18n="contact.form.phone"
+            >Número telefónico:</label
+          >
           <input type="tel" id="telefono" name="telefono" required />
 
-          <label for="mensaje">Mensaje:</label>
+          <label for="mensaje" data-i18n="contact.form.message">Mensaje:</label>
           <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
-          <button type="submit" class="btn-contact">Enviar solicitud</button>
+          <button
+            type="submit"
+            class="btn-contact"
+            data-i18n="contact.form.submit"
+          >
+            Enviar solicitud
+          </button>
         </form>
 
         <div class="contact-extras">
           <div class="extra-box">
-            <h3>¿Aún no pruebas la app?</h3>
-            <a href="https://travel-match-1f187.web.app" class="btn-extra"
+            <h3 data-i18n="contact.extra1.title">¿Aún no pruebas la app?</h3>
+            <a
+              href="https://travel-match-1f187.web.app"
+              class="btn-extra"
+              data-i18n="contact.extra1.cta"
               >¡Regístrate gratis!</a
             >
           </div>
           <div class="extra-box">
-            <h3>Encuentra a otro viajero</h3>
-            <a href="https://travel-match-1f187.web.app" class="btn-extra">¡Inicia sesión!</a>
+            <h3 data-i18n="contact.extra2.title">Encuentra a otro viajero</h3>
+            <a
+              href="https://travel-match-1f187.web.app"
+              class="btn-extra"
+              data-i18n="contact.extra2.cta"
+              >¡Inicia sesión!</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Videos -->
+    <section class="videos" id="videos">
+      <div class="videos-container">
+        <div class="videos-header">
+          <h2 data-i18n="videos.title">Conoce más sobre TravelMatch</h2>
+          <p data-i18n="videos.subtitle">
+            Descubre cómo nuestro equipo y producto pueden transformar tu
+            agencia de viajes
+          </p>
+        </div>
+
+        <div class="videos-grid">
+          <!-- Video 1: About the Team -->
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/EzUXV6MuBdo?si=gTTYIqq3Zr4h9XSg"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-info">
+              <h3 data-i18n="videos.team.title">About the Team</h3>
+              <p data-i18n="videos.team.description">
+                Conoce al equipo detrás de TravelMatch y nuestra pasión por
+                conectar viajeros con experiencias únicas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Video 2: About the Product -->
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/zy340YfRT58?si=xRr-7Q6qwsxkHhJV"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-info">
+              <h3 data-i18n="videos.product.title">About the Product</h3>
+              <p data-i18n="videos.product.description">
+                Explora las características y beneficios de nuestra plataforma
+                diseñada especialmente para agencias de viajes.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -296,7 +421,7 @@
       <div class="footer-content-wrapper">
         <div class="footer-top">
           <div class="footer-social">
-            <h4>SÍGUENOS</h4>
+            <h4 data-i18n="footer.social.title">SÍGUENOS</h4>
             <div class="social-icons">
               <a href="#" aria-label="Facebook"
                 ><i class="fab fa-facebook-f"></i
@@ -313,26 +438,54 @@
             </div>
           </div>
           <div class="footer-links">
-            <h4>Nosotros</h4>
+            <h4 data-i18n="footer.about.title">Nosotros</h4>
             <ul>
-              <li><a href="#">Quiénes somos</a></li>
-              <li><a href="#">Nuestro compromiso</a></li>
-              <li><a href="#">Trabaja con nosotros</a></li>
+              <li>
+                <a href="#" data-i18n="footer.about.whoWeAre">Quiénes somos</a>
+              </li>
+              <li>
+                <a href="#" data-i18n="footer.about.commitment"
+                  >Nuestro compromiso</a
+                >
+              </li>
+              <li>
+                <a href="#" data-i18n="footer.about.careers"
+                  >Trabaja con nosotros</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-links">
-            <h4>Legales</h4>
+            <h4 data-i18n="footer.legal.title">Legales</h4>
             <ul>
-              <li><a href="#">Política de Privacidad</a></li>
-              <li><a href="#">Términos y condiciones</a></li>
+              <li>
+                <a href="#" data-i18n="footer.legal.privacy"
+                  >Política de Privacidad</a
+                >
+              </li>
+              <li>
+                <a href="#" data-i18n="footer.legal.terms"
+                  >Términos y condiciones</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-links">
-            <h4>Recursos</h4>
+            <h4 data-i18n="footer.resources.title">Recursos</h4>
             <ul>
-              <li><a href="#">Preguntas frecuentes</a></li>
-              <li><a href="#">Blog de viajes</a></li>
-              <li><a href="#">Ayuda al viajero</a></li>
+              <li>
+                <a href="#" data-i18n="footer.resources.faq"
+                  >Preguntas frecuentes</a
+                >
+              </li>
+              <li>
+                <a href="#" data-i18n="footer.resources.blog">Blog de viajes</a>
+              </li>
+              <li>
+                <a href="#" data-i18n="footer.resources.help"
+                  >Ayuda al viajero</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-logo">
@@ -340,13 +493,21 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 TravelMatch - Todos los derechos reservados</p>
+          <p data-i18n="footer.copyright">
+            &copy; 2025 TravelMatch - Todos los derechos reservados
+          </p>
         </div>
       </div>
     </footer>
 
+    <!-- Agregamos el script de i18next para la internacionalización -->
+    <script src="https://unpkg.com/i18next/i18next.min.js"></script>
+
     <!-- Agregamos el script general -->
     <script src="../js/main.js"></script>
+
+    <!-- Luego i18n.js para que tenga acceso a i18next -->
+    <script src="../js/i18n.js"></script>
 
     <!-- Agregamos FontAwesome para el manejo de iconos -->
     <script
