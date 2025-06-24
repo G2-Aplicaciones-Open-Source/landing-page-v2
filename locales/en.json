@@ -1,0 +1,102 @@
+{
+  "header": {
+    "title": "TravelMatch | Connect with your next personalized travel experience",
+    "menu": {
+      "services": "Our Services",
+      "testimonials": "Testimonials",
+      "contact": "Contact Us",
+      "agencies": "For Agencies"
+    },
+    "register": "Register"
+  },
+  "language": {
+    "current": "EN",
+    "spanish": "Español",
+    "english": "English"
+  },
+  "hero": {
+    "title": "Discover your next adventure",
+    "description": "TravelMatch connects travelers with local agencies that create unique experiences tailored to your tastes and needs.",
+    "cta": "Start Now"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Discover how TravelMatch can help you plan your next adventure",
+    "cta": "Explore Now",
+    "service1": {
+      "title": "Customize your experiences",
+      "description": "Adjust your trips to your interests, time and budget. Design your ideal experience with just a few clicks!"
+    },
+    "service2": {
+      "title": "Find all kinds of adventures",
+      "description": "Explore a wide variety of activities and destinations, from quiet getaways to adrenaline-filled experiences."
+    },
+    "service3": {
+      "title": "Connect with verified local agencies",
+      "description": "Find reliable agencies at your destination. We make sure you only work with verified professionals."
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "Don't know where to start? Let our recommendations guide you.",
+    "testimonial1": {
+      "content": "\"The app has allowed me to organize my itinerary every time I travel for work and look to visit a tourist place. It's ideal for anyone looking to relax during corporate trips.\"",
+      "name": "Felipe Ríos",
+      "role": "Corporate Tourist"
+    },
+    "testimonial2": {
+      "content": "\"It's just what I needed to find deals and diverse experiences for my travels. Easy to use and with search tools that save me time and improve my tourist decisions.\"",
+      "name": "Mariana Smith",
+      "role": "Adventure Tourist"
+    },
+    "testimonial3": {
+      "content": "\"The app has allowed us to increase our visibility within the market. Very useful for any business looking for efficiency and effectiveness in one place.\"",
+      "name": "Arturo Sarmiento",
+      "role": "Travel Agency Owner"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "form": {
+      "subtitle": "Request more information",
+      "email": "Email:",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone number:",
+      "phonePlaceholder": "+1 999 999 999",
+      "message": "Message:",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send request"
+    },
+    "extra1": {
+      "title": "Haven't tried the app yet?",
+      "cta": "Register for free!"
+    },
+    "extra2": {
+      "title": "Find your next adventure",
+      "cta": "Sign in now"
+    }
+  },
+  "footer": {
+    "social": {
+      "title": "FOLLOW US"
+    },
+    "about": {
+      "title": "About Us",
+      "whoWeAre": "Who we are",
+      "commitment": "Our commitment",
+      "careers": "Work with us"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms and conditions"
+    },
+    "resources": {
+      "title": "Resources",
+      "faq": "Frequently asked questions",
+      "blog": "Travel blog",
+      "help": "Traveler help"
+    },
+    "copyright": "© 2025 TravelMatch - All rights reserved"
+  }
+}

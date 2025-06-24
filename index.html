@@ -17,38 +17,87 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
-      <!-- Logo de la empresa -->
-      <div class="logo">
-        <a href="index.html"><h1>TravelMatch</h1></a>
-      </div>
-
-      <!-- Botón del menú hamburguesa (Responsive)-->
-      <button class="menu-toggle" aria-label="Abrir menú">
+    <header class="header" role="banner">
+      <!-- Mobile Menu Toggle -->
+      <button
+        class="menu-toggle"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+      >
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <!-- Menú de navegación -->
-      <nav class="nav">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html" aria-label="TravelMatch - Página de inicio">
+          <h1>TravelMatch</h1>
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="nav" role="navigation" aria-label="Navegación principal">
         <ul>
-          <li><a href="#services">Nuestros Servicios</a></li>
-          <li><a href="#testimonials">Testimonios</a></li>
-          <li><a href="#contact">Contáctanos</a></li>
-          <li><a href="agencias.html">Para Agencias</a></li>
+          <li>
+            <a href="#services" data-i18n="header.menu.services"
+              >Nuestros Servicios</a
+            >
+          </li>
+          <li>
+            <a href="#testimonials" data-i18n="header.menu.testimonials"
+              >Testimonios</a
+            >
+          </li>
+          <li>
+            <a href="#contact" data-i18n="header.menu.contact">Contáctanos</a>
+          </li>
+          <li>
+            <a href="pages/agencias.html" data-i18n="header.menu.agencies"
+              >Para Agencias</a
+            >
+          </li>
         </ul>
-        <a href="registro.html" class="btn-hero">Registrarse</a>
+
+        <!-- Register Button -->
+        <a
+          href="https://travel-match-1f187.web.app"
+          class="btn-hero"
+          data-i18n="header.register"
+          >Registrarse</a
+        >
+
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+          <button
+            class="language-button"
+            aria-label="Cambiar idioma"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-globe"></i>
+            <span class="sr-only">Idioma actual: </span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="language-menu" role="menu">
+            <li data-lang="es" role="menuitem">ES</li>
+            <li data-lang="en" role="menuitem">EN</li>
+          </ul>
+        </div>
       </nav>
     </header>
 
     <!-- Sección principal -->
     <section class="hero">
       <div class="hero-text">
-        <h1>Descubre tu próxima aventura</h1>
-        <p>
+        <h1 data-i18n="hero.title">Descubre tu próxima aventura</h1>
+        <p data-i18n="hero.description">
           TravelMatch conecta viajeros con agencias locales que crean
           experiencias únicas, ajustadas a tus gustos y necesidades.
         </p>
-        <a href="registro.html" class="btn-hero">Comienza Ahora</a>
+        <a
+          href="https://travel-match-1f187.web.app"
+          class="btn-hero"
+          data-i18n="hero.cta"
+          >Comienza Ahora</a
+        >
       </div>
       <div class="hero-image">
         <img src="assets/landscape-img.png" alt="Imagen inicial de finanzas" />
@@ -60,13 +109,11 @@
     <!-- Sección de Servicios -->
     <section class="services" id="services">
       <div class="titulo-services">
-        <div class="titulo-services-text">
-          <h2>Nuestros Servicios</h2>
-          <p>
-            Descubre cómo TravelMatch puede ayudarte a planificar tu próxima
-            aventura
-          </p>
-        </div>
+        <h2 data-i18n="services.title">Nuestros Servicios</h2>
+        <p data-i18n="services.subtitle">
+          Descubre cómo TravelMatch puede ayudarte a planificar tu próxima
+          aventura
+        </p>
       </div>
       <div class="carousel-container">
         <!-- Boton -->
@@ -85,12 +132,16 @@
                   />
                 </div>
                 <div class="service-card-carousel-text">
-                  <h3>Personaliza tus experiencias</h3>
-                  <p>
+                  <h3 data-i18n="services.service1.title">
+                    Personaliza tus experiencias
+                  </h3>
+                  <p data-i18n="services.service1.description">
                     Ajusta tus viajes a tus intereses, tiempos y presupuesto.
                     ¡Diseña tu experiencia ideal con unos pocos clics!
                   </p>
-                  <a href="#" class="btn-service">Explora Ahora</a>
+                  <a href="#" class="btn-service" data-i18n="services.cta"
+                    >Explora Ahora</a
+                  >
                 </div>
               </div>
             </div>
@@ -104,13 +155,17 @@
                   />
                 </div>
                 <div class="service-card-carousel-text">
-                  <h3>Encuentra todo tipo de aventuras</h3>
-                  <p>
+                  <h3 data-i18n="services.service2.title">
+                    Encuentra todo tipo de aventuras
+                  </h3>
+                  <p data-i18n="services.service2.description">
                     Explora una amplia variedad de actividades y destinos, desde
                     escapadas tranquilas hasta experiencias llenas de
                     adrenalina.
                   </p>
-                  <a href="#" class="btn-service">Explora Ahora</a>
+                  <a href="#" class="btn-service" data-i18n="services.cta"
+                    >Explora Ahora</a
+                  >
                 </div>
               </div>
             </div>
@@ -124,12 +179,16 @@
                   />
                 </div>
                 <div class="service-card-carousel-text">
-                  <h3>Conecta con agencias locales verificadas</h3>
-                  <p>
+                  <h3 data-i18n="services.service3.title">
+                    Conecta con agencias locales verificadas
+                  </h3>
+                  <p data-i18n="services.service3.description">
                     Encuentra agencias confiables en tu destino. Nos aseguramos
                     de que solo trabajes con profesionales verificados.
                   </p>
-                  <a href="#" class="btn-service">Explora Ahora</a>
+                  <a href="#" class="btn-service" data-i18n="services.cta"
+                    >Explora Ahora</a
+                  >
                 </div>
               </div>
             </div>
@@ -147,41 +206,41 @@
     <!-- Sección de Testimonios -->
     <section class="testimonials" id="testimonials">
       <div class="testimonios-titulos">
-        <div class="testimonios-titulos-text">
-          <h2>Testimonios</h2>
-          <p>
-            ¿No sabes por dónde empezar? Déjate guiar por nuestras
-            recomendaciones.
-          </p>
-        </div>
+        <h2 data-i18n="testimonials.title">Testimonios</h2>
+        <p data-i18n="testimonials.subtitle">
+          ¿No sabes por dónde empezar? Déjate guiar por nuestras
+          recomendaciones.
+        </p>
       </div>
       <div class="testimonial-container">
         <div class="testimonial-box">
-          <p>
-            “La app me ha permitido organizar mi itinerario cada vez que viajo
+          <p data-i18n="testimonials.testimonial1.content">
+            "La app me ha permitido organizar mi itinerario cada vez que viajo
             por trabajo y busco visitar un lugar turistico. Es ideal para
-            cualquiera que busque relajarse durante viajes corporativos.”
+            cualquiera que busque relajarse durante viajes corporativos."
           </p>
-          <h3>Felipe Ríos</h3>
-          <p>Turista Corporativo</p>
+          <h3 data-i18n="testimonials.testimonial1.name">Felipe Ríos</h3>
+          <p data-i18n="testimonials.testimonial1.role">Turista Corporativo</p>
         </div>
         <div class="testimonial-box">
-          <p>
-            “Es justo lo que necesitaba para encontrar ofertas y diversas
+          <p data-i18n="testimonials.testimonial2.content">
+            "Es justo lo que necesitaba para encontrar ofertas y diversas
             experiencias para mis viajes. Fácil de usar y con herramientas de
-            busqueda que me ahorran tiempo y mejoran mis decisiones turisticas.”
+            busqueda que me ahorran tiempo y mejoran mis decisiones turisticas."
           </p>
-          <h3>Mariana Smith</h3>
-          <p>Turista Aventurera</p>
+          <h3 data-i18n="testimonials.testimonial2.name">Mariana Smith</h3>
+          <p data-i18n="testimonials.testimonial2.role">Turista Aventurera</p>
         </div>
         <div class="testimonial-box">
-          <p>
-            “La app nos ha permitido organizar aumentar nuestra visibilidad
+          <p data-i18n="testimonials.testimonial3.content">
+            "La app nos ha permitido organizar aumentar nuestra visibilidad
             dentro del mercado. Muy útil para cualquier negocio que busque
-            eficiencia y eficacia en un solo lugar.”
+            eficiencia y eficacia en un solo lugar."
           </p>
-          <h3>Arturo Sarmiento</h3>
-          <p>Dueño de Agencia de viajes</p>
+          <h3 data-i18n="testimonials.testimonial3.name">Arturo Sarmiento</h3>
+          <p data-i18n="testimonials.testimonial3.role">
+            Dueño de Agencia de viajes
+          </p>
         </div>
       </div>
     </section>
@@ -190,31 +249,74 @@
 
     <!-- Sección de Contacto -->
     <section class="contact" id="contact">
-      <h2>Contáctanos</h2>
+      <h2 data-i18n="contact.title">Contáctanos</h2>
 
       <div class="contact-content">
         <form action="#" method="POST" class="contact-form">
-          <p>Solicita más información</p>
-          <label for="email">Correo electrónico:</label>
-          <input type="email" id="email" name="email" required />
+          <p data-i18n="contact.form.subtitle">Solicita más información</p>
+          <label for="email" data-i18n="contact.form.email"
+            >Correo electrónico:</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            data-i18n="contact.form.emailPlaceholder"
+            placeholder="tu@email.com"
+            required
+          />
 
-          <label for="telefono">Número telefónico:</label>
-          <input type="tel" id="telefono" name="telefono" required />
+          <label for="telefono" data-i18n="contact.form.phone"
+            >Número telefónico:</label
+          >
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            data-i18n="contact.form.phonePlaceholder"
+            placeholder="+51 999 999 999"
+            required
+          />
 
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          <label for="mensaje" data-i18n="contact.form.message">Mensaje:</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="4"
+            data-i18n="contact.form.messagePlaceholder"
+            placeholder="Escribe tu mensaje aquí..."
+            required
+          ></textarea>
 
-          <button type="submit" class="btn-contact">Enviar solicitud</button>
+          <button
+            type="submit"
+            class="btn-contact"
+            data-i18n="contact.form.submit"
+          >
+            Enviar solicitud
+          </button>
         </form>
 
         <div class="contact-extras">
           <div class="extra-box">
-            <h3>¿Aún no pruebas la app?</h3>
-            <a href="registro.html" class="btn-extra">¡Regístrate gratis!</a>
+            <h3 data-i18n="contact.extra1.title">¿Aún no pruebas la app?</h3>
+            <a
+              href="https://travel-match-1f187.web.app"
+              class="btn-extra"
+              data-i18n="contact.extra1.cta"
+              >¡Regístrate gratis!</a
+            >
           </div>
           <div class="extra-box">
-            <h3>Encuentra tu próxima aventura</h3>
-            <a href="login.html" class="btn-extra">¡Inicia sesión!</a>
+            <h3 data-i18n="contact.extra2.title">
+              Encuentra tu próxima aventura
+            </h3>
+            <a
+              href="https://travel-match-1f187.web.app"
+              class="btn-extra"
+              data-i18n="contact.extra2.cta"
+              >¡Inicia sesión ahora!</a
+            >
           </div>
         </div>
       </div>
@@ -225,7 +327,7 @@
       <div class="footer-content-wrapper">
         <div class="footer-top">
           <div class="footer-social">
-            <h4>SÍGUENOS</h4>
+            <h4 data-i18n="footer.social.title">SÍGUENOS</h4>
             <div class="social-icons">
               <a href="#" aria-label="Facebook"
                 ><i class="fab fa-facebook-f"></i
@@ -242,26 +344,54 @@
             </div>
           </div>
           <div class="footer-links">
-            <h4>Nosotros</h4>
+            <h4 data-i18n="footer.about.title">Nosotros</h4>
             <ul>
-              <li><a href="#">Quiénes somos</a></li>
-              <li><a href="#">Nuestro compromiso</a></li>
-              <li><a href="#">Trabaja con nosotros</a></li>
+              <li>
+                <a href="#" data-i18n="footer.about.whoWeAre">Quiénes somos</a>
+              </li>
+              <li>
+                <a href="#" data-i18n="footer.about.commitment"
+                  >Nuestro compromiso</a
+                >
+              </li>
+              <li>
+                <a href="#" data-i18n="footer.about.careers"
+                  >Trabaja con nosotros</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-links">
-            <h4>Legales</h4>
+            <h4 data-i18n="footer.legal.title">Legales</h4>
             <ul>
-              <li><a href="#">Política de Privacidad</a></li>
-              <li><a href="#">Términos y condiciones</a></li>
+              <li>
+                <a href="#" data-i18n="footer.legal.privacy"
+                  >Política de Privacidad</a
+                >
+              </li>
+              <li>
+                <a href="#" data-i18n="footer.legal.terms"
+                  >Términos y condiciones</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-links">
-            <h4>Recursos</h4>
+            <h4 data-i18n="footer.resources.title">Recursos</h4>
             <ul>
-              <li><a href="#">Preguntas frecuentes</a></li>
-              <li><a href="#">Blog de viajes</a></li>
-              <li><a href="#">Ayuda al viajero</a></li>
+              <li>
+                <a href="#" data-i18n="footer.resources.faq"
+                  >Preguntas frecuentes</a
+                >
+              </li>
+              <li>
+                <a href="#" data-i18n="footer.resources.blog">Blog de viajes</a>
+              </li>
+              <li>
+                <a href="#" data-i18n="footer.resources.help"
+                  >Ayuda al viajero</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-logo">
@@ -269,13 +399,21 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 TravelMatch - Todos los derechos reservados</p>
+          <p data-i18n="footer.copyright">
+            &copy; 2025 TravelMatch - Todos los derechos reservados
+          </p>
         </div>
       </div>
     </footer>
 
+    <!-- Agregamos el script de i18next para la internacionalización -->
+    <script src="https://unpkg.com/i18next/i18next.min.js"></script>
+
     <!-- Agregamos el script general -->
     <script src="js/main.js"></script>
+
+    <!-- Luego i18n.js para que tenga acceso a i18next -->
+    <script src="js/i18n.js"></script>
 
     <!-- Agregamos FontAwesome para el manejo de iconos -->
     <script
