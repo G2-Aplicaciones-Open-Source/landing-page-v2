@@ -1,4 +1,4 @@
-/* Hoja de estilos general */
+/* --- Estilos CSS para la Landing Page V2 --- */
 
 /* Reset de márgenes, padding y box-sizing para un diseño más uniforme */
 * {
@@ -16,114 +16,352 @@
 }
 
 /* --- Estilos Globales --- */
-
 body {
   font-family: "Nunito Sans", Arial, sans-serif;
   background-color: var(--main-background-color); /* Color de fondo principal */
+  padding-top: 50px;
 }
 
-/* --- Header --- */
-
+/* Header Container */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffd479;
-  padding: 15px 50px;
+  background-color: var(--secondary-background-color);
+  padding: 1rem 3rem;
+  position: fixed;
+  top: 0; /* Posicionar en la parte superior */
+  left: 0; /* Posicionar al inicio izquierdo */
+  width: 100%; /* Ocupar todo el ancho */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos */
 }
 
-.logo a,
-.footer-logo a {
+/* Logo Styles */
+.logo a {
   text-decoration: none;
 }
 
 .logo h1 {
   font-family: "Nunito Sans", Arial, sans-serif;
-  font-size: 37px;
+  font-size: 2.3rem;
   font-weight: 900;
   color: var(--main-font-color);
-  margin-right: auto;
+  margin: 0;
+  transition: color 0.3s ease;
 }
 
+.logo h1:hover {
+  color: var(--secondary-font-color);
+}
 
-/* --- Menú de Navegación --- */
-
+/* Navigation - Desktop First Approach */
 .nav {
   display: flex;
   align-items: center;
-  position: fixed; /* Fijo para que sea un menú lateral */
-  top: 0;
-  right: -100%; /* Oculto fuera de la pantalla por defecto */
-  height: 100%;
-  width: 250px;
-  background-color: #b3b3b3; /* Fondo oscuro */
-  flex-direction: column;
-  padding: 20px 0;
-  transition: right 0.3s ease-in-out; /* Animación para mostrar/ocultar */
-  z-index: 1000; /* Asegurar que esté encima de otros elementos */
-}
-
-.nav.active {
-  right: 0; /* Mostrar el menú lateral */
+  gap: 2rem;
 }
 
 .nav ul {
-  list-style: none;
   display: flex;
-  flex-direction: column; /* Apilar enlaces */
-  gap: 15px;
-  padding: 0 15px;
-  width: 100%;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav ul li a {
   text-decoration: none;
   color: var(--main-font-color);
-  font-weight: bold;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .nav ul li a:hover {
-  background-color: #ffd479; /* Resaltar en hover */
+  background-color: rgba(255, 255, 255, 0.2);
   color: var(--secondary-font-color);
+  transform: translateY(-2px);
 }
 
-/* Botón del menú hamburguesa */
+/* Register Button in Navigation */
+.nav .btn-hero {
+  background-color: var(--main-font-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+
+.nav .btn-hero:hover {
+  background-color: var(--secondary-font-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Language Switcher */
+.language-switcher {
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.language-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--main-font-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.language-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.language-button i {
+  font-size: 1rem;
+}
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background-color: white;
+  border: none;
+  border-radius: 12px;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  min-width: 80px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.language-switcher.active .language-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-menu li {
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--main-font-color);
+  transition: background-color 0.3s ease;
+}
+
+.language-menu li:hover {
+  background-color: var(--secondary-background-color);
+}
+
+.language-menu li:first-child {
+  border-radius: 12px 12px 0 0;
+}
+
+.language-menu li:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+/* Mobile Menu Toggle */
 .menu-toggle {
-  display: block; /* Mostrar en pantallas pequeñas */
+  display: none;
   background: none;
   border: none;
   color: var(--main-font-color);
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
-  z-index: 1100; /* Asegurar que esté encima del menú */
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  z-index: 1100;
+}
+
+.menu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .menu-toggle i {
-  pointer-events: none; /* Evitar que el ícono interfiera con el clic */
+  pointer-events: none;
 }
 
-/* Estilos para pantallas grandes */
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none; /* Ocultar el botón hamburguesa */
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet and Small Desktop */
+@media (max-width: 1024px) {
+  .header {
+    padding: 1rem 2rem;
   }
 
-  .nav {
-    position: static; /* Menú normal en pantallas grandes */
-    flex-direction: row;
-    height: auto;
-    width: auto;
-    background: none;
-    transition: none;
+  .logo h1 {
+    font-size: 2rem;
   }
 
   .nav ul {
-    flex-direction: row; /* Mostrar enlaces en línea */
-    gap: 20px;
+    gap: 1rem;
+  }
+
+  .nav ul li a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+
+  .logo h1 {
+    font-size: 1.8rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Mobile Navigation */
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 280px;
+    background: linear-gradient(
+      135deg,
+      var(--main-background-color) 0%,
+      white 100%
+    );
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 1rem;
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1000;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 25px 0 0 25px;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  .nav ul li {
+    width: 100%;
+  }
+
+  .nav ul li a {
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .nav ul li a:hover {
+    background-color: var(--secondary-background-color);
+    transform: translateX(-5px);
+  }
+
+  /* Mobile Register Button */
+  .nav .btn-hero {
+    margin: 1rem 0 0 0;
+    padding: 1rem 2rem;
+    width: 80%;
+    text-align: center;
+    font-size: 1.1rem;
+    border-radius: 25px;
+  }
+
+  /* Mobile Language Switcher */
+  .language-switcher {
+    margin: 1rem 0 0 0;
+  }
+
+  .language-button {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+  }
+
+  .language-menu {
+    position: relative;
+    top: 0.5rem;
+    right: auto;
+    width: 100%;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.75rem 1rem;
+  }
+
+  .logo h1 {
+    font-size: 1.6rem;
+  }
+
+  .nav {
+    width: 260px;
+  }
+
+  .menu-toggle {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile Menu Backdrop */
+@media (max-width: 768px) {
+  .nav.active::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+    animation: fadeIn 0.3s ease;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -246,169 +484,4 @@ body {
 
 .form-links a:hover {
   color: #666;
-}
-
-/* ==========================================================================
-         Media Queries (Responsive Adjustments)
-         ========================================================================== */
-
-/* --- Tablets and Smaller Desktops --- */
-@media (max-width: 991.98px) {
-  .hero {
-    padding: 80px 30px;
-    text-align: center; /* Centrar texto en hero */
-  }
-  .hero-text {
-    align-items: center; /* Centrar contenido de hero-text */
-    max-width: 100%;
-  }
-  .hero-image {
-    margin-top: 40px; /* Espacio cuando se apila */
-    flex-basis: 100%; /* Asegurar que ocupe todo el ancho al apilar */
-  }
-  .services,
-  .testimonials,
-  .contact {
-    padding: 60px 20px; /* Reducir padding general */
-  }
-
-  .titulo-services,
-  .testimonios-titulos {
-    max-width: 90%; /* Usar porcentaje */
-  }
-
-  .carousel-container {
-    max-width: 95%; /* Hacer carrusel un poco más ancho */
-  }
-
-  .carousel-button.prev {
-    left: 5px;
-  }
-  .carousel-button.next {
-    right: 5px;
-  }
-
-  .testimonial-container {
-    gap: 25px; /* Menos espacio entre testimonios */
-  }
-
-  .contact-content {
-    flex-direction: column;
-    align-items: center; /* Centrar items cuando se apilan */
-    gap: 40px;
-  }
-  .contact-form,
-  .contact-extras {
-    width: 100%; /* Ocupar más ancho */
-    max-width: 600px; /* Limitar un poco */
-    flex-basis: auto; /* Resetear flex-basis */
-  }
-  .contact-extras {
-    align-items: stretch;
-  }
-}
-
-/* --- Mobile Devices --- */
-@media (max-width: 767.98px) {
-  /* Reducir tamaños de fuente */
-  .hero-text h1 {
-    font-size: 40px;
-  }
-  .hero-text p {
-    font-size: 18px;
-  }
-  .titulo-services h2,
-  .testimonios-titulos h2,
-  .contact h2 {
-    font-size: 32px;
-    line-height: 1.3;
-  }
-  .titulo-services p,
-  .testimonios-titulos p {
-    font-size: 18px;
-  }
-
-  .btn-hero,
-  .btn-service,
-  .btn-contact,
-  .btn-extra {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  .service-card-carousel {
-    flex-direction: column; /* Apilar imagen y texto en carrusel */
-    text-align: center;
-    gap: 20px;
-  }
-  .service-card-carousel-img {
-    flex-basis: auto; /* Resetear base */
-    width: 60%; /* Ajustar ancho de imagen */
-    min-width: 0;
-  }
-  .service-card-carousel-text {
-    text-align: center;
-    min-width: 0;
-  }
-
-  .carousel-button {
-    font-size: 2rem; /* Iconos de carrusel más pequeños */
-  }
-  .carousel-button.prev {
-    left: 5px;
-  }
-  .carousel-button.next {
-    right: 5px;
-  }
-
-  .testimonial-box {
-    min-width: 90%; /* Hacer testimonios más anchos */
-  }
-
-  .contact-form {
-    padding: 30px;
-  }
-  .contact-form p {
-    font-size: 20px;
-  }
-  .extra-box {
-    padding: 25px;
-  }
-  .extra-box h3 {
-    font-size: 18px;
-  }
-}
-
-/* --- Smaller Mobile Devices --- */
-@media (max-width: 479.98px) {
-  .hero {
-    padding: 60px 20px;
-  }
-  .hero-text h1 {
-    font-size: 32px;
-  }
-  .hero-text p {
-    font-size: 16px;
-  }
-  .titulo-services h2,
-  .testimonios-titulos h2,
-  .contact h2 {
-    font-size: 28px;
-  }
-  .titulo-services p,
-  .testimonios-titulos p {
-    font-size: 16px;
-  }
-
-  .btn-hero,
-  .btn-service,
-  .btn-contact,
-  .btn-extra {
-    width: 100%; /* Botones full-width */
-    max-width: none;
-    box-sizing: border-box; /* Incluir padding en el ancho */
-  }
-  .btn-contact {
-    align-self: auto;
-  } /* Resetear alineación */
 }
