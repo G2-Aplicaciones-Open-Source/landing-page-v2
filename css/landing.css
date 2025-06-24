@@ -85,11 +85,12 @@
 /* --- Services Section --- */
 .services {
   display: flex;
-  padding: 80px 20px; /* Ajustar padding */
+  padding: 50px 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f5f0e6; /* Color de fondo base */
+  background-color: #f5f0e6;
+  min-height: 100vh;
 }
 
 .titulo-services {
@@ -101,21 +102,16 @@
   gap: 12px;
 }
 
-/* No es necesario .titulo-services-text si .titulo-services es flex-column */
-/* .titulo-services-text { ... } */
-
 .titulo-services h2 {
-  /* align-self: stretch; */ /* No necesario si el contenedor está centrado */
-  color: #1c1f2b; /* Color más oscuro */
+  color: #1c1f2b;
   font-size: 45px;
   font-weight: 800;
-  font-family: "Nunito Sans", sans-serif; /* Asegurar fuente */
+  font-family: "Nunito Sans", sans-serif;
   line-height: 1.3;
 }
 
 .titulo-services p {
-  /* align-self: stretch; */ /* No necesario */
-  color: #333; /* Color de párrafo */
+  color: #333;
   font-family: "Nunito Sans", sans-serif;
   font-size: 22px;
   font-weight: 500;
@@ -125,7 +121,8 @@
 /* --- Carousel Component (within Services) --- */
 .carousel-container {
   position: relative;
-  width: 80%;
+  width: 80%; /* Ajustar ancho para desktop, dale más espacio */
+  max-width: 1200px; /* Limitar el ancho máximo para que no se vea demasiado estirado */
   margin: 40px auto;
   display: flex;
   align-items: center;
@@ -143,10 +140,13 @@
 }
 
 .carousel-slide {
+  width: 100%;
   min-width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   flex-shrink: 0;
-  padding: 0 10px; /* Reducir padding si los botones están fuera */
+  padding: 0 1rem;
+  position: relative;
 }
 
 .service-card-carousel {
@@ -158,10 +158,9 @@
   border-radius: 25px;
   border: 1px solid #e0e0e0;
   min-height: 300px;
-  flex-wrap: wrap; /* Permitir envolver en pantallas muy pequeñas */
-  width: 100%; /* Asegura que la tarjeta ocupe todo el ancho del slide (menos padding) */
-  box-sizing: border-box; /* Incluye padding y borde en el ancho/alto total */
-  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
 }
 
 .service-card-carousel-img {
@@ -174,16 +173,18 @@
   max-width: 100%;
   height: auto;
   max-height: 250px;
+  border-radius: 15px;
 }
 
 .service-card-carousel-text {
   flex: 1;
   text-align: left;
-  min-width: 250px; /* Ancho mínimo para el texto */
-  max-width: 400px; /* Limitar el ancho máximo del texto */
+  min-width: 250px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Asegurar que el contenido esté distribuido */
+  justify-content: space-between;
+  gap: 15px;
 }
 
 .service-card-carousel-text h3 {
@@ -191,7 +192,7 @@
   font-size: 24px;
   font-weight: 700;
   color: #333;
-  margin-bottom: 15px;
+  margin: 0;
 }
 
 .service-card-carousel-text p {
@@ -212,6 +213,7 @@
   display: inline-block;
   text-align: center;
   transition: background-color 0.3s, transform 0.3s;
+  align-self: flex-start;
 }
 .btn-service:hover {
   background-color: #372f2f;
@@ -278,9 +280,6 @@
   gap: 12px;
   /* width: 1140px; */ /* Usar max-width en su lugar */
 }
-
-/* No es necesario .testimonios-titulos-text si .testimonios-titulos es flex-column */
-/* .testimonios-titulos-text { ... } */
 
 .testimonios-titulos h2 {
   /* align-self: stretch; */
@@ -492,4 +491,232 @@
 .btn-extra:hover {
   background-color: #1e223b;
   color: #ffd479;
+}
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+
+/* --- Tablets and Smaller Desktops --- */
+@media (max-width: 991.98px) {
+  .hero {
+    padding: 80px 30px;
+    text-align: center; /* Centrar texto en hero */
+  }
+  .hero-text {
+    align-items: center; /* Centrar contenido de hero-text */
+    max-width: 100%;
+  }
+  .hero-image {
+    margin-top: 40px; /* Espacio cuando se apila */
+    flex-basis: 100%; /* Asegurar que ocupe todo el ancho al apilar */
+  }
+  .services,
+  .testimonials,
+  .contact {
+    padding: 60px 20px; /* Reducir padding general */
+  }
+
+  .titulo-services,
+  .testimonios-titulos {
+    max-width: 90%; /* Usar porcentaje */
+  }
+
+  .service-card-carousel {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 15px;
+    min-height: auto;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .carousel-container {
+    width: 85%;
+    padding: 0 20px;
+  }
+
+  .carousel-button.prev {
+    left: -10px;
+  }
+
+  .carousel-button.next {
+    right: -10px;
+  }
+
+  .service-card-carousel-text {
+    align-items: center;
+  }
+
+  .btn-service {
+    align-self: center;
+  }
+
+  .testimonial-container {
+    gap: 25px;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .contact-form,
+  .contact-extras {
+    width: 100%;
+    max-width: 600px;
+    flex-basis: auto;
+  }
+
+  .contact-extras {
+    align-items: stretch;
+  }
+}
+
+/* --- Mobile Devices --- */
+@media (max-width: 767.98px) {
+  /* Reducir tamaños de fuente */
+  .hero-text h1 {
+    font-size: 40px;
+  }
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .services {
+    padding: 10px;
+    height: auto;
+  }
+
+  .titulo-services h2,
+  .testimonios-titulos h2,
+  .contact h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .titulo-services p,
+  .testimonios-titulos p {
+    font-size: 18px;
+  }
+
+  .carousel-container {
+    width: 100%;
+    padding: 0 10px; /* Reducir padding */
+    margin: 0;
+    overflow: hidden; /* Prevenir desbordamiento */
+  }
+
+  .carousel-slide {
+    padding: 0 20px; /* Reducir padding significativamente */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .btn-hero,
+  .btn-service,
+  .btn-contact,
+  .btn-extra {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .service-card-carousel {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: calc(100% - 20px);
+    min-height: auto;
+    height: auto;
+  }
+
+  .service-card-carousel-img {
+    flex: none;
+    width: 100%;
+    max-width: 280px;
+    min-width: auto;
+  }
+
+  .service-card-carousel-img img {
+    max-height: 180px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .service-card-carousel-text {
+    text-align: center;
+    width: 100%;
+  }
+
+  .service-card-carousel-text h3 {
+    font-size: 22px;
+  }
+
+  .service-card-carousel-text p {
+    font-size: 16px;
+  }
+
+  .carousel-button {
+    font-size: 2rem; /* Iconos de carrusel más pequeños */
+  }
+  .carousel-button.prev {
+    left: 5px;
+  }
+  .carousel-button.next {
+    right: 5px;
+  }
+
+  .testimonial-box {
+    min-width: 90%; /* Hacer testimonios más anchos */
+  }
+
+  .contact-form {
+    padding: 30px;
+  }
+  .contact-form p {
+    font-size: 20px;
+  }
+  .extra-box {
+    padding: 25px;
+  }
+  .extra-box h3 {
+    font-size: 18px;
+  }
+}
+
+/* --- Smaller Mobile Devices --- */
+@media (max-width: 479.98px) {
+  .hero {
+    padding: 60px 20px;
+  }
+  .hero-text h1 {
+    font-size: 32px;
+  }
+  .hero-text p {
+    font-size: 16px;
+  }
+  .titulo-services h2,
+  .testimonios-titulos h2,
+  .contact h2 {
+    font-size: 28px;
+  }
+  .titulo-services p,
+  .testimonios-titulos p {
+    font-size: 16px;
+  }
+
+  .btn-hero,
+  .btn-service,
+  .btn-contact,
+  .btn-extra {
+    width: 200px;
+    max-width: none;
+    box-sizing: border-box; /* Incluir padding en el ancho */
+  }
+  .btn-contact {
+    align-self: auto;
+  } /* Resetear alineación */
 }
