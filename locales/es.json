@@ -8,6 +8,12 @@
       "contact": "Contáctanos",
       "agencies": "Para Agencias"
     },
+    "menuAgencies": {
+      "services": "Como Funciona",
+      "testimonials": "Testimonios",
+      "contact": "Contáctanos",
+      "agencies": "Para Viajeros"
+    },
     "register": "Registrarse"
   },
   "language": {
@@ -18,7 +24,12 @@
   "hero": {
     "title": "Descubre tu próxima aventura",
     "description": "TravelMatch conecta viajeros con agencias locales que crean experiencias únicas, ajustadas a tus gustos y necesidades.",
-    "cta": "Comienza Ahora"
+    "cta": "Comienza Ahora",
+    "agencies": {
+      "title": "Impulsa tu agencia al siguiente nivel",
+      "description": "TravelMatch te conecta con viajeros interesados en tus servicios. Optimiza tu visibilidad, ahorra tiempo y aumenta tus reservas.",
+      "cta": "Únete a TravelMatch"
+    }
   },
   "services": {
     "title": "Nuestros Servicios",
@@ -35,6 +46,26 @@
     "service3": {
       "title": "Conecta con agencias locales verificadas",
       "description": "Encuentra agencias confiables en tu destino. Nos aseguramos de que solo trabajes con profesionales verificados."
+    },
+    "agencies": {
+      "title": "¿Cómo funciona para agencias?",
+      "subtitle": "TravelMatch te brinda herramientas digitales para atraer, gestionar y fidelizar clientes con facilidad.",
+      "service1": {
+        "title": "Panel de gestión intuitivo",
+        "description": "Administra tus paquetes, responde solicitudes y haz seguimiento a reservas desde un solo lugar."
+      },
+      "service2": {
+        "title": "Recibe viajeros calificados",
+        "description": "Conecta con usuarios que buscan exactamente los servicios que tú ofreces, sin esfuerzo adicional."
+      },
+      "service3": {
+        "title": "Datos para decisiones estratégicas",
+        "description": "Accede a estadísticas sobre tus reservas, intereses del mercado y rendimiento de tus paquetes."
+      },
+      "service4": {
+        "title": "Obtén ingresos recurrentes",
+        "description": "Con cada suscripción activa que reciba tu agencia desde la app, generas ingresos de forma constante. ¡Convierte tu experiencia en una fuente de ganancias sostenibles!"
+      }
     }
   },
   "testimonials": {
@@ -54,6 +85,25 @@
       "content": "\"La app nos ha permitido aumentar nuestra visibilidad dentro del mercado. Muy útil para cualquier negocio que busque eficiencia y eficacia en un solo lugar.\"",
       "name": "Arturo Sarmiento",
       "role": "Dueño de Agencia de viajes"
+    },
+    "agencies": {
+      "title": "Lo que dicen nuestras agencias aliadas",
+      "subtitle": "Conoce cómo TravelMatch ha transformado la manera de operar y crecer para agencias de todo el país.",
+      "testimonial1": {
+        "content": "\"Gracias a TravelMatch, nuestra agencia ha duplicado su número de reservas en solo 3 meses. ¡Una plataforma que realmente entiende al sector!\"",
+        "name": "Andrea Torres",
+        "role": "Gerente de Aventura Andina"
+      },
+      "testimonial2": {
+        "content": "\"Antes solo trabajábamos con clientes locales. Ahora tenemos visitantes internacionales cada semana. ¡Y todo es súper fácil de manejar!\"",
+        "name": "Renzo Gutiérrez",
+        "role": "Dueño de Ruta Viva Travel"
+      },
+      "testimonial3": {
+        "content": "\"El panel de gestión nos permite ahorrar tiempo y concentrarnos en lo que importa: diseñar experiencias inolvidables para nuestros clientes.\"",
+        "name": "Camila López",
+        "role": "Coordinadora en Destino Natural"
+      }
     }
   },
   "contact": {
@@ -74,7 +124,19 @@
     },
     "extra2": {
       "title": "Encuentra tu próxima aventura",
-      "cta": "¡Inicia sesión ahora!"
+      "cta": "¡Inicia sesión!"
+    }
+  },
+  "videos":{
+    "title": "Conoce más sobre TravelMatch",
+    "subtitle": "Descubre cómo nuestro equipo y producto pueden transformar tu agencia de viajes",
+    "team": {
+      "title": "Nuestro equipo",
+      "description": "Un grupo apasionado por el turismo y la tecnología, listo para ayudarte a alcanzar tus metas."
+    },
+    "product": {
+      "title": "Nuestro producto",
+      "description": "Una plataforma intuitiva y poderosa que conecta viajeros con agencias de forma eficiente."
     }
   },
   "footer": {
